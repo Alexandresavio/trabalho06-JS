@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="resposta.css">
+        <title>Trabalho 006 - JS</title>
+    </head>
+    <body>
+      <h1>Trabalho 6</h1>
+      <h2>Exercícios de Programação</h2>
+
+      <p>
+        1. Escreva um algoritmo que receba uma idade e verifique se é Maior ou Menor de 18 anos.
+      </p>
+          <div class="campos">       
+            <form>
+              <fieldset>
+               <legend>Verificador de idade</legend>
+                  <p>
+                    Ano nascimento: <input type="number" id="anoNasc">
+                  </p> 
+                  <p>
+                    Ano Atual: <input type="number" id= "anoAtual">  
+                  </p> 
+
+                  <input type="button" value="Verificar" onclick="verifica()">     
+
+                  <input type="reset" value="Limpar"> 
+
+                  <div id="resultado">
+                     Resultado:
+                  </div>  
+                </fieldset>
+            </form>           
+          </div>  <!--fim exercicio 001--> 
+          
+          <hr>
+
+          <p>
+            2. Escreva um algoritmo que receba um número e verifique se é Par ou Ímpar.
+          </p>
+          <div class="campos">
+              <form>
+                <fieldset>
+                  <legend>Verificador par ou impar</legend>
+                  <p>
+                    Informe um número:<input type="number" id="numero">
+                  </p>
+                  <input type="button" value="verificar" onclick="verificaNum()">
+                  <input type="reset" value="limpar" >
+                  <div id="resultado002">
+                    Resultado:
+                  </div>
+                </fieldset>
+              </form>
+
+          </div><!--fim exercicio 002-->
+
+          <hr>
+
+          <p>
+            3. Tendo como entrada a altura e o sexo (F: feminino ou M: masculino) de uma pessoa, escreva um algoritmo que calcule e imprima seu peso ideal, utilizando a tabela abaixo:                 
+          </p>
+          <img src="img/tabela-imc.jpeg" alt="tabela-imc">
+          <div class="campos">
+            <form>
+              <fieldset>
+                <legend>Calculo IMC</legend>
+                Sexo:<br>
+                <p>
+                  <label for="masculino">Maculino</label> 
+                  <input type="radio" name="sexo" id="masculino">
+
+                  <label for="feminino">Feminino</label>
+                  <input type="radio" name="sexo" id="feminino">
+                </p>
+
+                <p>               
+                 Peso: <input type="number" id="peso">
+                </p>
+
+                <p> 
+                 Altura: <input type="number" id="altura">
+                </p>
+
+                <input type="button" value="calcular" onclick="calcularImc()">
+                <input type="reset" value="limpar">
+
+                <div id="resultado003">
+                  IMC:
+                </div>
+              </fieldset>
+            </form>
+          </div> <!--fim exercicio 003-->
+
+          <hr>
+
+          <p>
+            4. Escreva um algoritmo que leia 3 valores representando os 3 lados de um triângulo. Mostre o tipo do triângulo.            
+          </p>
+          <p>- Equilátero: 3 lados iguais</p>
+          <p>- Isósceles: 2 lados iguais</p>
+          <p>- Escaleno: 3 lados diferentes</p>
+
+          <div class="campos">
+          <form>
+            <fieldset>
+              <legend>Triângulo</legend>
+              <p>
+                1º lado: <input type="number" id="l1">
+              </p>
+              <p>
+                2º lado: <input type="number" id="l2">
+              </p>
+              <p>
+                3º lado: <input type="number" id="l3">
+              </p>
+
+              <input type="button" value="calcular" onclick="calcularTri()">
+              <input type="reset" value="limpar">
+
+              <div id="resultado004">
+                Triângulo:
+              </div>
+              
+            </fieldset>
+          </form>
+        </div><!--fim exercicio 004-->
+
+        <hr>
+
+        <P>
+          5. Escreva um algoritmo que receba uma região do país e informe o nome da região informada.
+        </P>
+        
+        <div class="campos1">
+          <form>
+            <fieldset>
+              <legend>Escolha a sua Região</legend>
+              Regiões:
+              <ol>
+                <li> Sul</li>
+                <li> Sudeste</li>
+                <li> Centro-Oeste</li>
+                <li> Norte</li>
+                <li> Nordeste</li>
+              </ol>
+              <input type="number" id="opcao" placeholder="Digite aqui sua escolha:">
+              <input type="button" value="ok" onclick="escolha()">
+              <input type="reset" value="limpar">
+              
+              <div id="resultado005">
+                  Sua região:
+              </div>
+            </fieldset>
+          </form>
+        </div><!--fim exercicio 005-->
+
+        <hr>
+
+        <p>
+          6. Escreva um algoritmo que construa um menu de cadastro com as opções abaixo.
+        </p>
+
+        <div class="campos1">
+          <form>
+            <fieldset>
+              <legend>Escolha uma das opções ou 0 para sair:</legend>
+              Regiões:
+              <ul>
+                <li> C) cadastrar</li>
+                <li> R) buscar</li>
+                <li> U) alterar</li>
+                <li> D) excluir</li>
+              </ul>
+              <input type="text" id="op" placeholder="Digite aqui sua escolha:">
+              <input type="button" value="ok" onclick="escolha006()">
+              <input type="reset" value="limpar">
+              
+              <div id="resultado006">
+                  Opção escolhida:
+              </div>
+            </fieldset>
+          </form>
+        </div><!--fim exercicio 006-->
+
+        <hr>
+
+        <p>
+          7. Escreva um algoritmo que determine o preço com desconto para entradas de cinema. Mostre a categoria, o desconto e o valor final. Desconto não cumulativo.
+        </p>
+
+        <div class="campos1">
+          <form>
+            <fieldset>
+              <legend>Bilhetes online:</legend>
+              
+              Escolha uma opção:
+              <ol>
+                <li> Estudantes recebem 50% de desconto.</li>
+                <li> Aposentados recebem 30% de desconto. </li>
+                <li> Nas quartas, todos recebem 50% de desconto.</li>
+                <li> Demais clientes pagam o ingresso completo.</li>
+                <li> Para cancelar</li>
+              </ol>
+              <input type="text" id="op1" placeholder="Digite aqui sua escolha:">
+              <input type="button" value="ok" onclick="escolha007()">
+              <input type="reset" value="limpar">
+              
+              <p>Ingresso R$ 25,00.</p>
+              <div id="resultado007">
+                
+                  Opção escolhida:
+              </div>
+            </fieldset>
+          </form>
+        </div><!--fim exercicio 006-->
+
+
+          <script src="resposta.js"></script>
+    </body>
+</html>
